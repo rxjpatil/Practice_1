@@ -102,7 +102,7 @@
             </div>
 
             <!-- Years of Experience (Dropdown, visible only if 'Yes' is selected) -->
-            <div class="mb-3 experience-dropdown">
+            <div class="mb-3 experience-dropdown" required>
                 <label for="years" class="form-label">Years of Experience</label>
                 <select class="form-select" id="years">
                     <option value="">Select years of experience</option>
@@ -111,11 +111,6 @@
                     <option value="3">3 years</option>
                     <option value="4">4 years</option>
                     <option value="5">5 years</option>
-                    <option value="6">6 years</option>
-                    <option value="7">7 years</option>
-                    <option value="8">8 years</option>
-                    <option value="9">9 years</option>
-                    <option value="10">10 years</option>
                 </select>
             </div>
 
@@ -154,7 +149,7 @@
             const message = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nQualification: ${qualification}\nDOB: ${dob}\nInsurance Experience: ${experience}\nYears of Experience: ${years}`;
 
             // WhatsApp number to send message to
-            const whatsappNumber = "9511892983";
+            const whatsappNumber = "9922375100";
             const whatsappURL = `https://api.whatsapp.com/send?phone=91${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
             // Redirect to WhatsApp
