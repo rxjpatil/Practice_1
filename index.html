@@ -7,44 +7,35 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;500;600&display=swap');
-
         body {
-            background-color: #f0f0f0; /* Light grey background */
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: 'Helvetica', sans-serif; /* Use a similar font to SF Pro */
+            font-family: 'Helvetica', sans-serif;
         }
         .login-section {
             background-color: white;
             padding: 40px;
-            border-radius: 12px; /* Slightly rounder corners */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             width: 100%;
-            position: relative;
         }
         h2 {
-            font-weight: 600; /* Bolder font for the title */
-            color: #333; /* Darker color for text */
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
         }
         .form-label {
-            font-weight: 500; /* Medium weight for labels */
+            font-weight: 500;
         }
         .btn-primary {
-            background-color: #007aff; /* Apple blue color */
+            background-color: #007aff;
             border: none;
         }
         .btn-primary:hover {
-            background-color: #005bb5; /* Darker blue on hover */
+            background-color: #005bb5;
         }
         .experience-dropdown {
             display: none;
@@ -54,35 +45,29 @@
 <body>
 
     <div class="login-section">
-        <hr>
-        
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBd7ngyzjZwZhUViYApb6e1bjnUnPOVl0MTw&s" 
-        alt="LIC Logo" 
-        style="width: 100px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
-   
         <h2 class="mb-4 text-center">Advisor Recruitment Application Form</h2>
         <form id="jobForm" onsubmit="sendToWhatsApp(event)">
             <!-- Name -->
             <div class="mb-3">
-                <label for="name" class="form-label">Name (जसे, अमित शर्मा)</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your full name (जसे, अमित शर्मा)" required>
+                <label for="name" class="form-label">Name (उदाहरण: अमित शर्मा)</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
             </div>
 
             <!-- Phone Number -->
             <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number (जसे, 9876543210)</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number (जसे, 9876543210)" required>
+                <label for="phone" class="form-label">Phone Number (उदाहरण: 9876543210)</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
             </div>
 
             <!-- Email -->
             <div class="mb-3">
-                <label for="email" class="form-label">Email (जसे, example@mail.com)</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email (जसे, example@mail.com)" required>
+                <label for="email" class="form-label">Email (उदाहरण: example@mail.com)</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
 
             <!-- Qualification -->
             <div class="mb-3">
-                <label for="qualification" class="form-label">योग्यता (Qualification)</label>
+                <label for="qualification" class="form-label">Qualification (योग्यता)</label>
                 <input type="text" class="form-control" id="qualification" placeholder="Enter your qualification" required>
             </div>
 
@@ -92,16 +77,16 @@
                 <input type="date" class="form-control" id="dob" required>
             </div>
 
-            <!-- Experience in Insurance Job (Yes/No) -->
+            <!-- Experience in Insurance Job -->
             <div class="mb-3">
-                <label class="form-label">Do you have experience in an insurance job? (तुमच्याकडे विमा कामाचा अनुभव आहे का?)</label>
+                <label class="form-label">Experience in Insurance Job? (विमा कामाचा अनुभव?)</label>
                 <select class="form-select" id="experience" onchange="toggleExperienceDropdown()" required>
                     <option value="no">नाही (No)</option>
                     <option value="yes">होय (Yes)</option>
                 </select>
             </div>
 
-            <!-- Years of Experience (Dropdown, visible only if 'Yes' is selected) -->
+            <!-- Years of Experience -->
             <div class="mb-3 experience-dropdown" required>
                 <label for="years" class="form-label">Years of Experience (अनुभवाचे वर्षे)</label>
                 <select class="form-select" id="years">
@@ -117,8 +102,6 @@
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary w-100">जमा करा (Submit)</button>
         </form>
-
-        <hr>
     </div>
 
     <!-- Bootstrap 5 JS and dependencies -->
@@ -128,11 +111,7 @@
         function toggleExperienceDropdown() {
             const experience = document.getElementById("experience").value;
             const experienceDropdown = document.querySelector(".experience-dropdown");
-            if (experience === "yes") {
-                experienceDropdown.style.display = "block";
-            } else {
-                experienceDropdown.style.display = "none";
-            }
+            experienceDropdown.style.display = experience === "yes" ? "block" : "none";
         }
 
         function sendToWhatsApp(event) {
