@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIC Job Application Form</title>
+    <title>LIC | Advisor Recruitment Application</title>
         <link rel="icon" href="https://gallerypng.com/wp-content/uploads/2024/07/lic-logo-png-picture.png" type="image/x-icon"> <!-- Change the href to the favicon image path -->
 
     <!-- Bootstrap 5 CSS -->
@@ -62,13 +62,13 @@
         alt="LIC Logo" 
         style="width: 100px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
    
-        <h2 class="mb-4 text-center">Advisor Recruitment Application Form</h2>
+        <h2 class="mb-4 text-center">Advisor Recruitment Form</h2>
         <form id="jobForm" onsubmit="sendToWhatsApp(event)">
             <!-- Name -->
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
 <!--                 <input type="text" class="form-control" id="name" placeholder="Enter your full name" required> -->
-                                <input type="text" class="form-control" id="name" placeholder="उदाहरण: Amit Sharma" required>
+                <input type="text" class="form-control" id="name" placeholder="Example: Amit Sharma" required>
 
             </div>
 
@@ -76,7 +76,7 @@
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
 <!--                 <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required> -->
-                                <input type="tel" class="form-control" id="phone" placeholder="उदाहरण: 9454xxxxxx" required>
+                <input type="tel" class="form-control" id="phone" placeholder="Example: 9454xxxxxx" required>
 
             </div>
 
@@ -84,14 +84,14 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
 <!--                 <input type="email" class="form-control" id="email" placeholder="Enter your email" required> -->
-                                <input type="email" class="form-control" id="email" placeholder="उदाहरण: example@mail.com" required>
+                <input type="email" class="form-control" id="email" placeholder="Example: example@mail.com" required>
 
             </div>
 
             <!-- Qualification -->
             <div class="mb-3">
                 <label for="qualification" class="form-label">Qualification</label>
-                <input type="text" class="form-control" id="qualification" placeholder="उदाहरण: 12th, Diploma, Bachelor's, etc." required>
+                <input type="text" class="form-control" id="qualification" placeholder="Example: 12th, Diploma, Bachelor's, etc." required>
             </div>
 
             <!-- DOB -->
@@ -104,8 +104,8 @@
             <div class="mb-3">
                 <label class="form-label">Do you have experience in an insurance job?</label>
                 <select class="form-select" id="experience" onchange="toggleExperienceDropdown()" required>
-                    <option value="no">नाही (No)</option>
-                    <option value="yes">होय (Yes)</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
                 </select>
             </div>
 
@@ -113,17 +113,17 @@
             <div class="mb-3 experience-dropdown" required>
                 <label for="years" class="form-label">Years of Experience</label>
                 <select class="form-select" id="years">
-                    <option value="">Select years of experience (अनुभवाचे वर्षे निवडा)</option>
-                    <option value="1">1 वर्ष (1 Year)</option>
-                    <option value="2">2 वर्ष (2 Years)</option>
-                    <option value="3">3 वर्ष (3 Years)</option>
-                    <option value="4">4 वर्ष (4 Years)</option>
-                    <option value="5">5 वर्ष (5 Years)</option>
+                    <option value="">Select years of experience</option>
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5 Years</option>
                 </select>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary w-100">जमा करा (Submit)</button>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
 
         <hr>
